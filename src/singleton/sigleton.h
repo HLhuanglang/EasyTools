@@ -1,5 +1,5 @@
-#ifndef __ET_et_sigleton_H
-#define __ET_et_sigleton_H
+#ifndef __ET_SIGLETON_H
+#define __ET_SIGLETON_H
 
 #include <memory>
 #include <mutex>
@@ -30,4 +30,4 @@ std::unique_ptr<T> et_sigleton<T>::instance_ = nullptr;
 template <typename T>
 std::once_flag et_sigleton<T>::once_f_;
 
-#endif // !__ET_et_sigleton_H
+#endif // !__ET_SIGLETON_H
