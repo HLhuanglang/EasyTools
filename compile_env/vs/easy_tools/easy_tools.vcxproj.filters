@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="log">
+      <UniqueIdentifier>{02add21b-fe43-4f21-bdc6-9725c8e7375a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="prefix">
+      <UniqueIdentifier>{e48131c6-7c30-44eb-8444-2c3c89c69e27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="safe_queue">
+      <UniqueIdentifier>{846439c4-ad7d-4036-bea8-8e6b628cd866}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sigleton">
+      <UniqueIdentifier>{692d5d18-cbb2-4245-97bf-3867ac2a0c3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialize">
+      <UniqueIdentifier>{086d8998-c0d0-4a76-8bc1-63b9df38c81a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialize\ini">
+      <UniqueIdentifier>{71733232-1b79-4644-936b-24f6a541a38c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialize\json">
+      <UniqueIdentifier>{b68eadfc-90c1-45ad-bcc3-0197867e0cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="serialize\xml">
+      <UniqueIdentifier>{da188587-3aec-475e-a40e-ffb3f9792076}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\log\log.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\serialize\ini\reader.cpp">
+      <Filter>serialize\ini</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\serialize\ini\writer.cpp">
+      <Filter>serialize\ini</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\log\log.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\easy_tools.h" />
+    <ClInclude Include="..\..\..\src\prefix\keyword.h">
+      <Filter>prefix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prefix\complier.h">
+      <Filter>prefix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prefix\prefix.h">
+      <Filter>prefix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\log\prefix.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\singleton\sigleton.h">
+      <Filter>sigleton</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\serialize\ini\reader.h">
+      <Filter>serialize\ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\serialize\ini\writer.h">
+      <Filter>serialize\ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\serialize\ini\ini.h">
+      <Filter>serialize\ini</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
