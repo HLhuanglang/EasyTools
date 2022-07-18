@@ -20,14 +20,14 @@ if not exist %inc_dir% mkdir %inc_dir%
 if not exist %lib_dir_x64% mkdir %lib_dir_x64%
 if not exist %lib_dir_x86% mkdir %lib_dir_x86%
 
-echo [easy_tools]:"¿½±´½Ó¿ÚÎÄµµ.md"
-xcopy>nul %top_dir%\docs\½Ó¿ÚÎÄµµ.md %out_dir%\ /F /Y 
+echo [easy_tools]:"æ‹·è´æŽ¥å£æ–‡æ¡£.md"
+xcopy>nul %top_dir%\docs\æŽ¥å£æ–‡æ¡£.md %out_dir%\ /F /Y 
 
-echo [easy_tools]:"¿½±´include"
+echo [easy_tools]:"æ‹·è´include"
 xcopy>nul %top_dir%\src\*.h %inc_dir%\ /F /Y /E
 
 if "%Debug_Release%"=="Debug" (
-	echo [easy_tools]:"¿½±´libet-d.dll"
+	echo [easy_tools]:"æ‹·è´libet-d.dll"
 	if "%Win32_x64%"=="Win32" (
 		xcopy>nul %top_dir%\bin\libet-d.dll %out_dir%\lib\x86 /F /Y	
 		xcopy>nul %top_dir%\bin\libet-d.lib %out_dir%\lib\x86 /F /Y	
@@ -40,7 +40,7 @@ if "%Debug_Release%"=="Debug" (
 )
 
 if "%Debug_Release%"=="Release" (
-	echo [easy_tools]:"¿½±´libet-r.dll"
+	echo [easy_tools]:"æ‹·è´libet-r.dll"
 	if "%Win32_x64%"=="Win32" (
 		xcopy>nul %top_dir%\bin\libet-r.dll %out_dir%\lib\x86 /F /Y	
 		xcopy>nul %top_dir%\bin\libet-r.lib %out_dir%\lib\x86 /F /Y	
