@@ -25,9 +25,9 @@ enum class log_level_e {
 };
 
 enum class log_target_e {
-	FILE = 0,          //Êä³öµ½ÎÄ¼þ
-	TERMINAL,          //Êä³öµ½ÖÕ¶Ë
-	FILE_AND_TERMINAL  //ÎÄ¼þºÍÖÕ¶Ë
+	FILE = 0,          //è¾“å‡ºåˆ°æ–‡ä»¶
+	TERMINAL,          //è¾“å‡ºåˆ°ç»ˆç«¯
+	FILE_AND_TERMINAL  //æ–‡ä»¶å’Œç»ˆç«¯
 };
 
 #endif // !__ET_LOG_PREFIX_H
