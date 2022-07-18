@@ -17,10 +17,10 @@ bool et_ini_handle::read(et_ini_file &ini) {
 	this->file_name_ = file_name_;
 	this->fp_ = fopen(file_name_, "r");
 	if (!this->fp_) {
-		et_error(MODULE_INI.c_str(), "open file failed!");
+		et_trace_error("open file failed!");
 		return false;
 	}
-	et_debug(MODULE_INI.c_str(), "open file %s succeed!", file_name_);
+	et_trace_debug("open file %s succeed!", file_name_);
 	char buf[1024] = { 0 };
 	std::string section;
 	parse_data_t parse_data;

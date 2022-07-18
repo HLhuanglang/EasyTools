@@ -7,7 +7,7 @@
 
 #include <string>
 
-const std::string MODULE_LOG = "et_log";
+#define ET_TRACE_MODULE_NAME  "et_log"
 
 #define DEFAULT_LOG_FILE_PATH "./"
 #define DEFAULT_LOG_FILE_NAME "et_log.log"

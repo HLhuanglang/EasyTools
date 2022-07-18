@@ -48,7 +48,7 @@ void et_log::logger_init() {
 		logger_->enable_fsync_ = true;
 		logger_->fp_ = NULL;
 		logger_->log_target_ = DEFAULT_LOG_TARGERT;
-		et_debug(MODULE_LOG.c_str(), "logger init succeed!");
+		et_trace_debug("logger init succeed!");
 	});
 }
 

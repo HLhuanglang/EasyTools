@@ -183,14 +183,18 @@
     <ClInclude Include="..\..\..\src\easy_tools.h" />
     <ClInclude Include="..\..\..\src\log\log.h" />
     <ClInclude Include="..\..\..\src\log\log_prefix.h" />
+    <ClInclude Include="..\..\..\src\pool\memory_pool\memory_prefix.h" />
+    <ClInclude Include="..\..\..\src\prefix\check.h" />
     <ClInclude Include="..\..\..\src\prefix\complier.h" />
     <ClInclude Include="..\..\..\src\prefix\keyword.h" />
     <ClInclude Include="..\..\..\src\prefix\prefix.h" />
+    <ClInclude Include="..\..\..\src\prefix\types.h" />
     <ClInclude Include="..\..\..\src\serialize\ini\ini.h" />
     <ClInclude Include="..\..\..\src\serialize\ini\parser.h" />
     <ClInclude Include="..\..\..\src\serialize\ini\ini_prefix.h" />
     <ClInclude Include="..\..\..\src\singleton\sigleton.h" />
     <ClInclude Include="..\..\..\src\utils\debug.h" />
+    <ClInclude Include="..\..\..\src\utils\module.h" />
     <ClInclude Include="..\..\..\src\utils\utils_prefix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

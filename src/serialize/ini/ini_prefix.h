@@ -9,10 +9,9 @@
 
 __et_extern_c_enter
 
-const std::string MODULE_INI = "et_ini";
+#define ET_TRACE_MODULE_NAME "et_ini"
 const char *const k_whitespace_delimiters = " \t\n\r\f\v";
-
-using parse_data_t = std::pair<std::string, std::string>;		//ini: key-value
+using parse_data_t = std::pair<std::string, std::string>;
 using kv_t = std::map<std::string, std::string>;
 using ini_containder_t = std::map<std::string, kv_t>;	//ini: section-kv
 

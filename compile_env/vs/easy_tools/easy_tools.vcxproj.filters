@@ -31,6 +31,12 @@
     <Filter Include="net">
       <UniqueIdentifier>{c34b684e-5ef2-4b5a-a120-aa187496d910}</UniqueIdentifier>
     </Filter>
+    <Filter Include="pool">
+      <UniqueIdentifier>{0ce59d2e-e127-4c46-9ba7-398c4ca91e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="pool\memory_pool">
+      <UniqueIdentifier>{ed12e38d-b918-4a4f-8d31-80c46a2878a5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\log\log.cpp">
@@ -87,6 +93,18 @@
     </ClInclude>
     <ClInclude Include="..\..\..\src\utils\utils_prefix.h">
       <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\pool\memory_pool\memory_prefix.h">
+      <Filter>pool\memory_pool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prefix\types.h">
+      <Filter>prefix</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\module.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\prefix\check.h">
+      <Filter>prefix</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

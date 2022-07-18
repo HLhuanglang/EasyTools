@@ -2,6 +2,7 @@
 #define __ET_UTILS_DEBUG_H
 
 #include "utils_prefix.h"
+#include "module.h"
 
 #include <cstdio>
 #include <cstdarg>
@@ -13,16 +14,16 @@
 
 __et_extern_c_enter
 
-__et_export void  et_print(const char *fmt, ...);
+void et_print(const char *fmt, ...);
 
-#define et_debug(module_name,msg, ...) \
+#define et_trace_debug(msg, ...) \
 do  {	\
-	et_print(GREEN "[%s][DEBUG]-[%s:%d]"msg __et_newline END, module_name,__et_filename, __et_line, ##__VA_ARGS__);\
+	et_print(GREEN "[%s][DEBUG]-[%s:%d]" msg __et_newline END, ET_TRACE_MODULE_NAME ,__et_filename, __et_line, ##__VA_ARGS__);\
 } while (0);
 
-#define et_error(module_name,msg, ...) \
+#define et_trace_error(msg, ...) \
 do  { \
-	et_print(RED "[%s][ERROR]-[%s:%d]"msg __et_newline END, module_name,__et_filename,__et_line, ##__VA_ARGS__);\
+	et_print(RED "[%s][ERROR]-[%s:%d]" msg __et_newline END, ET_TRACE_MODULE_NAME,__et_filename,__et_line, ##__VA_ARGS__);\
 } while (0);
 
 __et_extern_c_leave
