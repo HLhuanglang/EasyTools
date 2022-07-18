@@ -98,7 +98,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ET_CONFIG_OS_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -117,7 +117,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ET_CONFIG_OS_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -136,7 +136,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ET_CONFIG_OS_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -155,7 +155,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;ET_CONFIG_OS_WINDOWS</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -171,21 +171,27 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\src\easy_tools.cpp" />
     <ClCompile Include="..\..\..\src\log\log.cpp" />
-    <ClCompile Include="..\..\..\src\serialize\ini\reader.cpp" />
-    <ClCompile Include="..\..\..\src\serialize\ini\writer.cpp" />
+    <ClCompile Include="..\..\..\src\serialize\ini\ini.cpp" />
+    <ClCompile Include="..\..\..\src\serialize\ini\parser.cpp" />
+    <ClCompile Include="..\..\..\src\utils\debug.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\src\algorithm\algorithm.h" />
+    <ClInclude Include="..\..\..\src\algorithm\no_modifying_seq_operations.h" />
     <ClInclude Include="..\..\..\src\easy_tools.h" />
     <ClInclude Include="..\..\..\src\log\log.h" />
-    <ClInclude Include="..\..\..\src\log\prefix.h" />
+    <ClInclude Include="..\..\..\src\log\log_prefix.h" />
     <ClInclude Include="..\..\..\src\prefix\complier.h" />
     <ClInclude Include="..\..\..\src\prefix\keyword.h" />
     <ClInclude Include="..\..\..\src\prefix\prefix.h" />
     <ClInclude Include="..\..\..\src\serialize\ini\ini.h" />
-    <ClInclude Include="..\..\..\src\serialize\ini\reader.h" />
-    <ClInclude Include="..\..\..\src\serialize\ini\writer.h" />
+    <ClInclude Include="..\..\..\src\serialize\ini\parser.h" />
+    <ClInclude Include="..\..\..\src\serialize\ini\ini_prefix.h" />
     <ClInclude Include="..\..\..\src\singleton\sigleton.h" />
+    <ClInclude Include="..\..\..\src\utils\debug.h" />
+    <ClInclude Include="..\..\..\src\utils\utils_prefix.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

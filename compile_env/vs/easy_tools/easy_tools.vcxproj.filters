@@ -7,9 +7,6 @@
     <Filter Include="prefix">
       <UniqueIdentifier>{e48131c6-7c30-44eb-8444-2c3c89c69e27}</UniqueIdentifier>
     </Filter>
-    <Filter Include="safe_queue">
-      <UniqueIdentifier>{846439c4-ad7d-4036-bea8-8e6b628cd866}</UniqueIdentifier>
-    </Filter>
     <Filter Include="sigleton">
       <UniqueIdentifier>{692d5d18-cbb2-4245-97bf-3867ac2a0c3a}</UniqueIdentifier>
     </Filter>
@@ -25,17 +22,30 @@
     <Filter Include="serialize\xml">
       <UniqueIdentifier>{da188587-3aec-475e-a40e-ffb3f9792076}</UniqueIdentifier>
     </Filter>
+    <Filter Include="utils">
+      <UniqueIdentifier>{33933a3d-c8d9-472f-9d55-f218ac82e273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="algorithm">
+      <UniqueIdentifier>{3c64ba8c-b4cb-4d07-96b7-e1406c84b495}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="net">
+      <UniqueIdentifier>{c34b684e-5ef2-4b5a-a120-aa187496d910}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\log\log.cpp">
       <Filter>log</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\serialize\ini\reader.cpp">
+    <ClCompile Include="..\..\..\src\serialize\ini\parser.cpp">
       <Filter>serialize\ini</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\serialize\ini\writer.cpp">
+    <ClCompile Include="..\..\..\src\serialize\ini\ini.cpp">
       <Filter>serialize\ini</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\src\utils\debug.cpp">
+      <Filter>utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\easy_tools.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\log\log.h">
@@ -51,20 +61,32 @@
     <ClInclude Include="..\..\..\src\prefix\prefix.h">
       <Filter>prefix</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\log\prefix.h">
+    <ClInclude Include="..\..\..\src\log\log_prefix.h">
       <Filter>log</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\src\singleton\sigleton.h">
       <Filter>sigleton</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\src\serialize\ini\reader.h">
-      <Filter>serialize\ini</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\src\serialize\ini\writer.h">
-      <Filter>serialize\ini</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\src\serialize\ini\ini.h">
       <Filter>serialize\ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\serialize\ini\ini_prefix.h">
+      <Filter>serialize\ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\serialize\ini\parser.h">
+      <Filter>serialize\ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\debug.h">
+      <Filter>utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\algorithm\algorithm.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\algorithm\no_modifying_seq_operations.h">
+      <Filter>algorithm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\utils\utils_prefix.h">
+      <Filter>utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
