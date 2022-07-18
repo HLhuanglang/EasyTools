@@ -1,16 +1,12 @@
 #ifndef __ET_LOG_H
 #define __ET_LOG_H
 
-#include "../prefix/prefix.h"
-
-#include "../singleton/sigleton.h"
-
 #include <memory>
 #include <mutex>
 #include <string>
-#include <cstring>	//for strrchr
+#include <atomic>
 
-#include "prefix.h"
+#include "log_prefix.h"
 
 __et_extern_c_enter
 
@@ -34,6 +30,7 @@ public:
 	~et_log();
 private:
 	logger_t *logger_;
+	std::once_flag once_;
 };
 
 /***************************************************************
@@ -62,27 +59,27 @@ private:
 // 日志信息
 #define log_debug(fmt, ...)                                            \
   et_sigleton<et_log>::get_instance()->logger_print(                                   \
-      log_level_e::LOG_LEVEL_DEBUG, "[%s:%d][%s]" fmt "\r\n", __FILENAME__, __LINE__, \
+      log_level_e::LOG_LEVEL_DEBUG, "[%s:%d][%s]" fmt __et_newline, __et_filename, __et_line, \
       __FUNCTION__, ##__VA_ARGS__)
 
 #define log_info(fmt, ...)                                            \
   et_sigleton<et_log>::get_instance()->logger_print(                                  \
-      log_level_e::LOG_LEVEL_INFO, "[%s:%d][%s]" fmt "\r\n", __FILENAME__, __LINE__, \
+      log_level_e::LOG_LEVEL_INFO, "[%s:%d][%s]" fmt __et_newline, __et_filename, __et_line, \
       __FUNCTION__, ##__VA_ARGS__)
 
 #define log_warn(fmt, ...)                                            \
   et_sigleton<et_log>::get_instance()->logger_print(                                  \
-      log_level_e::LOG_LEVEL_WARN, "[%s:%d][%s]" fmt "\r\n", __FILENAME__, __LINE__, \
+      log_level_e::LOG_LEVEL_WARN, "[%s:%d][%s]" fmt __et_newline, __et_filename, __et_line, \
       __FUNCTION__, ##__VA_ARGS__)
 
 #define log_error(fmt, ...)                                            \
   et_sigleton<et_log>::get_instance()->logger_print(                                   \
-      log_level_e::LOG_LEVEL_ERROR, "[%s:%d][%s]" fmt "\r\n", __FILENAME__, __LINE__, \
+      log_level_e::LOG_LEVEL_ERROR, "[%s:%d][%s]" fmt __et_newline, __et_filename, __et_line, \
       __FUNCTION__, ##__VA_ARGS__)
 
 #define log_fatal(fmt, ...)                                            \
   et_sigleton<et_log>::get_instance()->logger_print(                                   \
-      log_level_e::LOG_LEVEL_FATAL, "[%s:%d][%s]" fmt "\r\n", __FILENAME__, __LINE__, \
+      log_level_e::LOG_LEVEL_FATAL, "[%s:%d][%s]" fmt __et_newline, __et_filename, __et_line, \
       __FUNCTION__, ##__VA_ARGS__)
 
 // 别名

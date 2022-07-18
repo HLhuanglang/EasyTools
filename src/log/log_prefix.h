@@ -1,21 +1,14 @@
 #ifndef __ET_LOG_PREFIX_H
 #define __ET_LOG_PREFIX_H
 
-#ifdef _WIN32
-#define DIR_SEPARATOR '\\'
-#define DIR_SEPARATOR_STR "\\"
-#else
-#define DIR_SEPARATOR '/'
-#define DIR_SEPARATOR_STR "/"
-#endif
+#include "../prefix/prefix.h"
+#include "../singleton/sigleton.h"
+#include "../utils/debug.h"
 
-#ifndef __FILENAME__
-#define __FILENAME__                                                       \
-  (strrchr(__FILE__, DIR_SEPARATOR) ? strrchr(__FILE__, DIR_SEPARATOR) + 1 \
-                                    : __FILE__)
-#endif
+#include <string>
 
-// some default macro
+const std::string MODULE_LOG = "et_log";
+
 #define DEFAULT_LOG_FILE_PATH "./"
 #define DEFAULT_LOG_FILE_NAME "et_log.log"
 #define DEFAULT_LOG_LEVEL log_level_e::LOG_LEVEL_DEBUG

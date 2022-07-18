@@ -38,15 +38,18 @@ et_log::~et_log() {
 }
 
 void et_log::logger_init() {
-	logger_->bufsize_ = DEFAULT_LOG_MAX_BUFSIZE;
-	logger_->buf_ = (char *)malloc(logger_->bufsize_);
-	logger_->log_level_ = DEFAULT_LOG_LEVEL;
-	logger_->file_path_ = DEFAULT_LOG_FILE_PATH;
-	logger_->file_name_ = DEFAULT_LOG_FILE_NAME;
-	logger_->max_logfilesize_ = DEFAULT_LOG_MAX_BUFSIZE;
-	logger_->enable_fsync_ = true;
-	logger_->fp_ = NULL;
-	logger_->log_target_ = DEFAULT_LOG_TARGERT;
+	std::call_once(this->once_, [&]() {
+		logger_->bufsize_ = DEFAULT_LOG_MAX_BUFSIZE;
+		logger_->buf_ = (char *)malloc(logger_->bufsize_);
+		logger_->log_level_ = DEFAULT_LOG_LEVEL;
+		logger_->file_path_ = DEFAULT_LOG_FILE_PATH;
+		logger_->file_name_ = DEFAULT_LOG_FILE_NAME;
+		logger_->max_logfilesize_ = DEFAULT_LOG_MAX_BUFSIZE;
+		logger_->enable_fsync_ = true;
+		logger_->fp_ = NULL;
+		logger_->log_target_ = DEFAULT_LOG_TARGERT;
+		et_debug(MODULE_LOG.c_str(), "logger init succeed!");
+	});
 }
 
 void et_log::logger_set_log_target(log_target_e targert) {
@@ -153,7 +156,7 @@ void et_log::logger_print(log_level_e log_level, const char *fmt, ...) {
 
 	va_list ap;
 	va_start(ap, fmt);
-	len += vsnprintf(buf + len, bufsize - len, fmt, ap);
+	len += vsnprintf(buf + len, static_cast<size_t>(bufsize) - len, fmt, ap);
 	va_end(ap);
 
 	switch (logger_->log_target_) {
