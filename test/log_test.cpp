@@ -1,3 +1,5 @@
+#include "test.h"
+
 #include "easy_tools.h"
 
 void test_log() {
