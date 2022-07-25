@@ -20,9 +20,6 @@ if not exist %inc_dir% mkdir %inc_dir%
 if not exist %lib_dir_x64% mkdir %lib_dir_x64%
 if not exist %lib_dir_x86% mkdir %lib_dir_x86%
 
-echo [easy_tools]:"拷贝接口文档.md"
-xcopy>nul %top_dir%\docs\接口文档.md %out_dir%\ /F /Y 
-
 echo [easy_tools]:"拷贝include"
 xcopy>nul %top_dir%\src\*.h %inc_dir%\ /F /Y /E
 
