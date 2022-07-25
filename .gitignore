@@ -5,3 +5,6 @@
 /output
 /bin
 /compile_env/windows/.vs/*
+.vscode/configurationCache.log
+.vscode/dryrun.log
+.vscode/targets.log

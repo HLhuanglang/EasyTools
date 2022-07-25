@@ -1,0 +1,7 @@
+ALGO_HEADERS = ${src_dir}/algorithm/*h
+PREDIX_HEADERS = ${src_dir}/prefix/*.h
+LOG_HEADERS = ${src_dir}/log/*.h
+INI_HEADERS =  ${src_dir}/serialize/ini/*.h
+SINGLETON = ${src_dir}/singleton/*.h
+UTILS_HEADERS = ${src_dir}/utils/*.h
+API_HEADERS = ${src_dir}/*.h
