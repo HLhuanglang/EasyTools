@@ -13,7 +13,7 @@ src_c += $(foreach dir, $(tmp_dir), $(wildcard $(dir)/*.c))
 mode=${mode}
 platform=${platform}
 
-include inc.var
+include ${mkfile_dir}/inc.var
 
 
 build:

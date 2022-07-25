@@ -8,7 +8,7 @@ if [ $# -lt 2 ];then
     exit -1
 fi
 
-project_dir=`pwd`
+project_dir=$(cd `dirname $0`;pwd)
 output_dir=${project_dir}/../../output
 lib_dir=${output_dir}/lib
 inc_dir=${output_dir}/include
@@ -20,4 +20,4 @@ if [ ! -d ${output_dir} ];then
 fi
 
 #编译
-make mode=$1 platform=$2
+make -f ${project_dir}/makefile mode=$1 platform=$2
