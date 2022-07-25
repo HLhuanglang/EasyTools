@@ -11,13 +11,21 @@ src_cpp += $(foreach dir, $(tmp_dir), $(wildcard $(dir)/*.cpp))
 src_c += $(foreach dir, $(tmp_dir), $(wildcard $(dir)/*.c))
 
 mode=${mode}
+ifeq (${mode}, debug)
+	CXXFLAGS += -g
+endif
+
 platform=${platform}
+ifeq (${platform}, x86)
+	CXXFLAGS += -m32
+endif
 
 include ${mkfile_dir}/inc.var
 
 
+
 build:
-	g++ -fpic -shared -std=c++11 ${src_cpp} -o libet.so
+	g++ ${CXXFLAGS} -fpic -shared -std=c++11 ${src_cpp} -o libet.so
 	mv -f libet.so ${lib_dir}
 
 	mkdir -p ${inc_dir}/algorithm
