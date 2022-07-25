@@ -4,5 +4,4 @@
 
 /output
 /bin
-/compile_env/vs/.vs/msvc/v17
-/compile_env/windows/.vs/msvc/v17
+/compile_env/windows/.vs/*

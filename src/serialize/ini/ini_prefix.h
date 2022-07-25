@@ -7,8 +7,6 @@
 #include <map>
 #include <string>
 
-__et_extern_c_enter
-
 #define ET_TRACE_MODULE_NAME "et_ini"
 const char *const k_whitespace_delimiters = " \t\n\r\f\v";
 using parse_data_t = std::pair<std::string, std::string>;
@@ -22,7 +20,5 @@ enum class et_ini_data_type_e {
 	ET_DATA_KEY_VAL,
 	ET_DATA_UNKNOWN
 };
-
-__et_extern_c_leave
 
 #endif // !__ET_INI_PREFIX_H

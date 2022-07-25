@@ -12,8 +12,6 @@
 #define GREEN "\033[32m"
 #define RED "\033[31m"
 
-__et_extern_c_enter
-
 void et_print(const char *fmt, ...);
 
 #define et_trace_debug(msg, ...) \
@@ -25,7 +23,5 @@ do  {	\
 do  { \
 	et_print(RED "[%s][ERROR]-[%s:%d]" msg __et_newline END, ET_TRACE_MODULE_NAME,__et_filename,__et_line, ##__VA_ARGS__);\
 } while (0);
-
-__et_extern_c_leave
 
 #endif // !__ET_UTILS_DEBUG_H

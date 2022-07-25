@@ -183,7 +183,6 @@
     <ClInclude Include="..\..\..\src\easy_tools.h" />
     <ClInclude Include="..\..\..\src\log\log.h" />
     <ClInclude Include="..\..\..\src\log\log_prefix.h" />
-    <ClInclude Include="..\..\..\src\pool\memory_pool\memory_prefix.h" />
     <ClInclude Include="..\..\..\src\prefix\check.h" />
     <ClInclude Include="..\..\..\src\prefix\complier.h" />
     <ClInclude Include="..\..\..\src\prefix\keyword.h" />

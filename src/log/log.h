@@ -8,8 +8,6 @@
 
 #include "log_prefix.h"
 
-__et_extern_c_enter
-
 using logger_t = struct __et_logger;
 
 class __et_export et_log {
@@ -88,7 +86,5 @@ private:
 #define LOG_WARN	log_warn
 #define LOG_ERROR	log_error
 #define LOG_FATAL	log_fatal
-
-__et_extern_c_leave
 
 #endif __ET_LOG_H

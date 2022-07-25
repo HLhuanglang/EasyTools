@@ -4,8 +4,6 @@
 #include "parser.h"
 #include "ini_prefix.h"
 
-__et_extern_c_enter
-
 class __et_export et_ini_file {
 	friend class et_ini_handle;
 public:
@@ -30,7 +28,5 @@ private:
 	const char *file_name_ = nullptr;
 	FILE *fp_ = nullptr;
 };
-
-__et_extern_c_leave
 
 #endif // !__ET_INI_H
