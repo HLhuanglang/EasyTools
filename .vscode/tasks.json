@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "label": "build libet.so",
+            "label": "compile_libet.so",
             "type": "shell",
             "command": "${workspaceFolder}/compile_env/linux/build.sh debug x64",
             "group": {
@@ -10,7 +10,7 @@
             },
         },
         {
-            "label": "build test demo",
+            "label": "compile_testdemo",
             "type": "shell",
             "command": "make -f ${workspaceFolder}/test/makefile build",
             "group": "test"
