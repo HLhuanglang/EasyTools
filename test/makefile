@@ -1,18 +1,16 @@
 mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 mkfile_dir := $(dir $(mkfile_path))
 project_dir :=${mkfile_dir}..
-output_dir :=${project_dir}/output
-lib_dir :=${output_dir}/lib
-inc_dir :=${output_dir}/include
 
 build:
-	g++ -g -std=c++11 ${mkfile_dir}*.cpp -I${inc_dir} -I${mkfile_dir} -L${lib_dir} -let -o main -pthread
+	cp ${project_dir}/output/lib/libet.so ${project_dir}/test
+	g++ -g -std=c++11 ${project_dir}/test/*.cpp -I${project_dir}/output/include -I${project_dir}/test -L${project_dir}/test -Wl,-rpath=${project_dir}/test -let -o main -pthread
 	
 run:
 	./main
 
 clean:
-	rm -rf main
+	rm -rf main libet.so
 
 .PHONY:
 	test clear

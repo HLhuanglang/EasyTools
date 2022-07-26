@@ -3,7 +3,7 @@
         {
             "label": "build libet.so",
             "type": "shell",
-            "command": "${workspaceFolder}/compile_env/linux/build.sh release x86",
+            "command": "${workspaceFolder}/compile_env/linux/build.sh debug x64",
             "group": {
                 "kind": "build",
                 "isDefault": true
